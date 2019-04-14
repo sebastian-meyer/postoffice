@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
 
-Auth::routes();
+// Disable User Self-Registration
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
