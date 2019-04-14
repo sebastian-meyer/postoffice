@@ -25,11 +25,11 @@ return [
     |
     | Here you may provide the host address of the SMTP server used by your
     | applications. A default option is provided that is compatible with
-    | the Mailgun mail service which will provide reliable deliveries.
+    | the typical Postfix installation.
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,11 +38,11 @@ return [
     |
     | This is the SMTP port used by your application to deliver e-mails to
     | users of the application. Like the host we have set this value to
-    | stay compatible with the Mailgun e-mail application by default.
+    | stay compatible with the typical Postfix installation by default.
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 25),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@example.com'),
+        'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel Post Office')),
     ],
 
     /*
