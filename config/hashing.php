@@ -8,10 +8,11 @@ return [
     |--------------------------------------------------------------------------
     |
     | This option controls the default hash driver that will be used to hash
-    | passwords for your application. By default, the bcrypt algorithm is
-    | used; however, you remain free to modify this option if you wish.
+    | passwords for your application. By default, the Bcrypt algorithm is
+    | used; however, you remain free to modify this option if you wish. This
+    | should be the same as "default_pass_scheme" for Dovecot.
     |
-    | Supported: "bcrypt", "argon", "argon2id"
+    | Supported: "bcrypt", "argon" (since PHP 7.2), "argon2id" (since PHP 7.3)
     |
     */
 
