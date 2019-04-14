@@ -6,8 +6,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Account extends Authenticatable
 {
-    use Notifiable;
-
     /**
      * The model's default values for attributes.
      *
