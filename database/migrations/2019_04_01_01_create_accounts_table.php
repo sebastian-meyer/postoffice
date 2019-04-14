@@ -16,7 +16,7 @@ class CreateAccountsTable extends Migration
         if (! Schema::hasTable('accounts')) {
             // There is no mail server setup present. We'll create all necessary tables.
             Schema::create('accounts', function (Blueprint $table) {
-                $table->integer('id')->unsigned()->autoIncrement()->primary();
+                $table->integer('id')->unsigned()->autoIncrement();
                 $table->string('username', 64);
                 $table->string('domain', 190);
                 $table->string('login', 255)->virtualAs('CONCAT(`username`, "@", `domain`)')->nullable()->index();

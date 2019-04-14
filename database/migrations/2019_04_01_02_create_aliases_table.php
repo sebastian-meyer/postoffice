@@ -16,7 +16,7 @@ class CreateAliasesTable extends Migration
         if (! Schema::hasTable('aliases')) {
             // There is no mail server setup present. We'll create all necessary tables.
             Schema::create('aliases', function (Blueprint $table) {
-                $table->integer('id')->unsigned()->autoIncrement()->primary();
+                $table->integer('id')->unsigned()->autoIncrement();
                 $table->string('source_username', 64);
                 $table->string('source_domain', 190);
                 $table->string('source')->virtualAs('CONCAT(`source_username`, "@", `source_domain`)')->nullable()->index();

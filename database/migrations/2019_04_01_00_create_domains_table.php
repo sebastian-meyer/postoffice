@@ -16,7 +16,7 @@ class CreateDomainsTable extends Migration
         if (! Schema::hasTable('domains')) {
             // There is no mail server setup present. We'll create all necessary tables.
             Schema::create('domains', function (Blueprint $table) {
-                $table->integer('id')->unsigned()->autoIncrement()->primary();
+                $table->integer('id')->unsigned()->autoIncrement();
                 $table->string('domain', 190)->unique();
                 $table->timestamps();
             });
