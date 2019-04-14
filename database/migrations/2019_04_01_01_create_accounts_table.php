@@ -19,7 +19,7 @@ class CreateAccountsTable extends Migration
                 $table->integer('id')->unsigned()->autoIncrement();
                 $table->string('username', 64);
                 $table->string('domain', 190);
-                $table->string('login', 255)->virtualAs('CONCAT(`username`, "@", `domain`)')->nullable();
+                $table->string('email', 255)->virtualAs('CONCAT(`username`, "@", `domain`)')->nullable();
                 $table->string('password', 255);
                 $table->integer('quota')->unsigned()->default(0);
                 $table->boolean('enabled')->default(true);
@@ -35,7 +35,7 @@ class CreateAccountsTable extends Migration
                 && Schema::hasColumn('accounts', 'domain')) {
                     // There is an existing mail server setup, so just add some columns and indexes.
                     Schema::table('accounts', function(Blueprint $table) {
-                        $table->string('login', 255)->virtualAs('CONCAT(`username`, "@", `domain`)')->nullable();
+                        $table->string('email', 255)->virtualAs('CONCAT(`username`, "@", `domain`)')->nullable();
                         $table->enum('admin', ['global', 'domain'])->nullable();
                         $table->rememberToken();
                         $table->timestamps();
@@ -55,7 +55,7 @@ class CreateAccountsTable extends Migration
     {
         // Just drop the Post Office specific columns and indexes, but keep the basic mail server setup.
         Schema::table('accounts', function (Blueprint $table) {
-            $table->dropColumn(['login', 'admin']);
+            $table->dropColumn(['email', 'admin']);
             $table->dropRememberToken();
             $table->dropTimestamps();
         });
