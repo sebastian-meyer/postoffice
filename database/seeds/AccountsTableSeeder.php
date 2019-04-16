@@ -13,10 +13,21 @@ class AccountsTableSeeder extends Seeder
      */
     public function run()
     {
-        Account::firstOrCreate([
-            'username' => 'root',
-            'domain' => 'localhost',
-            'password' => Hash::make('password'),
-        ]);
+        $root = Account::firstOrNew(
+            [
+                'username' => 'root',
+                'domain' => 'localhost',
+            ],
+            [
+                'quota' => 0,
+                'enabled' => true,
+                'sendonly' => false,
+            ]
+        );
+        // Set new password only if record doesn't exist.
+        if (! $root->exists) {
+            $root->password = Hash::make('p4$$w0rd'); // Change this!
+        }
+        $root->save();
     }
 }

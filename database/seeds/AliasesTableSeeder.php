@@ -12,11 +12,16 @@ class AliasesTableSeeder extends Seeder
      */
     public function run()
     {
-        Alias::firstOrCreate([
-            'source_username' => 'postmaster',
-            'source_domain' => 'localhost',
-            'destination_username' => 'root',
-            'destination_domain' => 'localhost',
-        ]);
+        Alias::firstOrCreate(
+            [
+                'source_username' => 'postmaster',
+                'source_domain' => 'localhost',
+                'destination_username' => 'root',
+                'destination_domain' => 'localhost',
+            ],
+            [
+                'enabled' => true,
+            ]
+        );
     }
 }
