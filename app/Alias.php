@@ -12,7 +12,7 @@ class Alias extends Model
      * @var array
      */
     protected $attributes = [
-        'enabled' => true,
+        'enabled' => false,
     ];
 
     /**

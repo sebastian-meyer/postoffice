@@ -21,7 +21,7 @@ class CreateAliasesTable extends Migration
                 $table->string('source_domain', 190);
                 $table->string('destination_username', 64);
                 $table->string('destination_domain', 190);
-                $table->boolean('enabled')->default(true);
+                $table->boolean('enabled')->default(false);
                 $table->timestamps();
                 $table->unique(['source_username', 'source_domain', 'destination_username', 'destination_domain'], 'source_destination');
                 $table->foreign('source_domain')->references('domain')->on('domains');

@@ -22,7 +22,7 @@ class CreateAccountsTable extends Migration
                 $table->string('email', 255)->virtualAs('CONCAT(`username`, "@", `domain`)')->nullable();
                 $table->string('password', 255);
                 $table->integer('quota')->unsigned()->default(0);
-                $table->boolean('enabled')->default(true);
+                $table->boolean('enabled')->default(false);
                 $table->boolean('sendonly')->default(false);
                 $table->enum('admin', ['global', 'domain'])->nullable();
                 $table->rememberToken();

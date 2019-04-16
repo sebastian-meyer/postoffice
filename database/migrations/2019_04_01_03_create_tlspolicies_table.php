@@ -19,7 +19,7 @@ class CreateTlspoliciesTable extends Migration
                 $table->integer('id')->unsigned()->autoIncrement();
                 $table->string('domain', 255)->unique();
                 $table->enum('policy', ['none', 'may', 'encrypt', 'dane', 'dane-only', 'fingerprint', 'verify', 'secure'])->default('encrypt');
-                $table->string('params', 255)->default('');
+                $table->string('params', 255);
                 $table->timestamps();
             });
         } else {

@@ -16,7 +16,7 @@ class Account extends Authenticatable
      */
     protected $attributes = [
         'quota' => 0,
-        'enabled' => true,
+        'enabled' => false,
         'sendonly' => false,
         'admin' => null,
     ];
@@ -29,7 +29,6 @@ class Account extends Authenticatable
     protected $fillable = [
         'username',
         'domain',
-        'password',
         'quota',
         'enabled',
         'sendonly',
