@@ -36,10 +36,12 @@ return [
     */
 
     'guards' => [
+
         'web' => [
             'driver' => 'session',
             'provider' => 'accounts',
         ],
+
     ],
 
     /*
@@ -60,10 +62,12 @@ return [
     */
 
     'providers' => [
+
         'accounts' => [
             'driver' => 'eloquent',
             'model' => App\Account::class,
         ],
+
     ],
 
     /*
@@ -82,11 +86,13 @@ return [
     */
 
     'passwords' => [
+
         'accounts' => [
             'provider' => 'accounts',
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
     ],
 
 ];
