@@ -13,7 +13,7 @@
 
 Route::view('/', 'welcome');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 // Disable User Self-Registration
 Auth::routes(['register' => false]);
-
-Route::get('/home', 'HomeController@index')->name('home');
