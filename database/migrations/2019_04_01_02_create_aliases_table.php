@@ -25,6 +25,7 @@ class CreateAliasesTable extends Migration
                 $table->timestamps();
                 $table->unique(['source_username', 'source_domain', 'destination_username', 'destination_domain'], 'source_destination');
                 $table->foreign('source_domain')->references('domain')->on('domains');
+                $table->engine = 'InnoDB';
             });
         } else {
             // There is an existing mail server setup, so just add some columns.

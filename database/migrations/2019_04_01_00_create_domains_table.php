@@ -19,6 +19,7 @@ class CreateDomainsTable extends Migration
                 $table->integer('id')->unsigned()->autoIncrement();
                 $table->string('domain', 190)->unique();
                 $table->timestamps();
+                $table->engine = 'InnoDB';
             });
         } else {
             // There is an existing mail server setup, so just add some columns.

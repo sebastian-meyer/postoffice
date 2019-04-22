@@ -21,6 +21,7 @@ class CreateTlspoliciesTable extends Migration
                 $table->enum('policy', ['none', 'may', 'encrypt', 'dane', 'dane-only', 'fingerprint', 'verify', 'secure'])->default('encrypt');
                 $table->string('params', 255);
                 $table->timestamps();
+                $table->engine = 'InnoDB';
             });
         } else {
             // There is an existing mail server setup, so just add some columns.

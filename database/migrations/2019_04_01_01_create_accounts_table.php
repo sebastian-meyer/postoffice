@@ -29,6 +29,7 @@ class CreateAccountsTable extends Migration
                 $table->timestamps();
                 $table->unique(['username', 'domain']);
                 $table->foreign('domain')->references('domain')->on('domains');
+                $table->engine = 'InnoDB';
             });
         } else {
             if (Schema::hasColumn('accounts', 'username')
