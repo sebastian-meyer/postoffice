@@ -1,9 +1,10 @@
 {
-    "name": "laravel/laravel",
+    "name": "sebastian-meyer/laravel-postoffice",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Post Office is a Mail Server Web Interface made with Laravel.",
     "keywords": [
-        "framework",
+        "mail",
+        "dovecot",
         "laravel"
     ],
     "license": "MIT",
