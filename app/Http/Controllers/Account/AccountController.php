@@ -26,7 +26,7 @@ class AccountController extends Controller
      */
     public function changePasswordForm()
     {
-        return view('account.password.form');
+        return view('account.password');
     }
 
     /**
