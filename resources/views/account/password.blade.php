@@ -26,11 +26,11 @@
                         </div>
                         <div class="form-group">
                             <label for="newPassword">New Password:</label>
-                            <input type="password" class="form-control" name="newPassword"/>
+                            <input type="password" class="form-control" name="newPassword" autocomplete="new-password"/>
                         </div>
                         <div class="form-group">
                             <label for="newPassword_confirmation">Confirm Password:</label>
-                            <input type="password" class="form-control" name="newPassword_confirmation"/>
+                            <input type="password" class="form-control" name="newPassword_confirmation" autocomplete="new-password"/>
                         </div>
                         <button type="submit" class="btn btn-primary">Change Password</button>
                     </form>
