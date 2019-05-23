@@ -11,10 +11,8 @@
 |
 */
 
-Route::view('/', 'welcome')->name('index');
-
 // Homepage
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 // Account Management
 Route::namespace('Account')
