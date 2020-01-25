@@ -1,5 +1,5 @@
 {
-    "name": "sebastian-meyer/laravel-postoffice",
+    "name": "opencultureconsulting/laravel-postoffice",
     "type": "project",
     "description": "Post Office is a Mail Server Web Interface made with Laravel.",
     "keywords": [
