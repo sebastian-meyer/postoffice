@@ -7,7 +7,22 @@
         "dovecot",
         "laravel"
     ],
-    "license": "MIT",
+    "homepage": "https://github.com/opencultureconsulting/laravel-postoffice",
+    "readme": "readme.md",
+    "license": ["MIT"],
+    "authors": [
+        {
+            "name": "Sebastian Meyer",
+            "email": "sebastian.meyer@opencultureconsulting.com",
+            "homepage": "https://www.opencultureconsulting.com",
+            "role": "maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/opencultureconsulting/laravel-postoffice/issues",
+        "source": "https://github.com/opencultureconsulting/laravel-postoffice",
+        "docs": "https://github.com/opencultureconsulting/laravel-postoffice/blob/master/readme.md"
+    },
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
@@ -33,8 +48,6 @@
             "database/seeds"
         ]
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
