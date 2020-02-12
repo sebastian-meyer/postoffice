@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'cloud' => env('FILESYSTEM_CLOUD', 'null'),
+    'cloud' => env('FILESYSTEM_CLOUD', null),
 
     /*
     |--------------------------------------------------------------------------
